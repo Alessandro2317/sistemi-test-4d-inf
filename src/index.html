@@ -3,66 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Community di calcio </title>
+    <title>Community di calcio</title>
   </head>
 
   <body>
-    <header style="background-color: #0056b3; color: white; padding: 20px; text-align: center;">
+    <header style="background-color: #0056b3; color: white; padding: 20px; text-align: center; position: relative;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRueEqT3hn38yzqphVp6KARsAXJNr6ObddCKw&s"
+           alt="Logo Serie A"
+           style="position: absolute; top: 10px; right: 10px; width: 60px; height: auto;">
       <h1> Tutto sulla serie A </h1>
     </header>
 
+    <h2>Classifica Serie A (aggiornata al 19 maggio 2025)</h2>
+
+    {% for post in posts %}
     <main>
       <section id="classification">
-        <h2>Classifica Serie A (aggiornata al 15 maggio 2025)</h2>
-        <ol>
-          <li>Napoli – 78 punti [Champions League]</li>
-          <li>Inter – 76 punti [Champions League]</li>
-          <li>Atalanta – 71 punti [Champions League]</li>
-          <li>Juventus – 64 punti [Europa League]</li>
-          <li>Lazio – 64 punti [Europa League]</li>
-          <li>Roma – 63 punti [Conference League]</li>
-          <li>Bologna – 59 punti </li>
-          <li>Fiorentina – 59 punti</li>
-          <li>Milan – 48 punti</li>
-          <li>Udinese – 44 punti</li>
-          <li>Torino – 44 punti</li>
-          <li>Genoa – 40 punti</li>
-          <li>Como – 37 punti</li>
-          <li>Hellas Verona – 33 punti</li>
-          <li>Cagliari – 33 punti</li>
-          <li>Lecce – 30 punti</li>
-          <li>Parma – 29 punti</li>
-          <li>Empoli – 28 punti</li>
-          <li>Venezia – 28 punti</li>
-          <li>Monza – 18 punti</li>
-        </ol>
+
+          {{post.posizione}} {{post.title}} - {{post.punti}}
+        
       </section>
-    </main>
-      </section>      <section id="news">
-        <h2 style="color: blue;"> Notizie Recenti </h2>
+      {% endfor %}
+
+      <br>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGoFmeZYXP_sWznllM_FSKe9WVwygtlF7bXA&s"
+           alt="Immagine della Serie A" width="300" height="200">
+
+      <br>
+
+      <section id="news">
+        <h2 style="color: blue;">Notizie Recenti</h2>
         <ul>
-          <li> Notizia 1: Il Napoli è attualmente primo in classifica. </li>
-          <li> Notizia 2: Il Monza è retrocesso dalla Serie A. </li>
-          <li> Notizia 3: Il Milan ha perso la finale di Coppa Italia. </li>
+          <li>Notizia 1: Il Napoli è attualmente primo in classifica.</li>
+          <li>Notizia 2: Il Monza è retrocesso dalla Serie A.</li>
+          <li>Notizia 3: Il Milan ha perso la finale di Coppa Italia.</li>
         </ul>
       </section>
 
       <section id="images">
-        <h2> Immagini </h2>
-        <div style="display: flex;">
-          <img src="https://www.cartadiroma.org/wp-content/uploads/2014/08/pallone-calcio-1-1.jpg" alt="Immagine di calcio 1" width="300" height="200">
+        <h2>Immagini</h2>
+        <div style="display: flex; gap: 10px;">
+          <img src="https://static.sky.it/editorialimages/9870bda4d5e2782c71b1e0753fcfe5563d1b28db/skysport/it/calcio/serie-a/serie-a-lotta-scudetto-calendario-partite/volata_scudetto_36_giornata_02.jpg" alt="Immagine di calcio 1" width="300" height="200">
           <img src="https://images2.gazzettaobjects.it/methode_image/Video/2021/06/28/Calcio/Foto_Calcio_-_Trattate/5fb020ee-d843-11eb-b2b1-c23f28636d50_800x450.jpg" alt="Immagine di calcio 2" width="300" height="200">
-          <img src="https://media-assets.wired.it/photos/66953fc39b6737ca0e3fcf4d/3:2/w_3837,h_2558,c_limit/915803806" alt="Immagine di calcio 3" width="300" height="200">
+          <img src="https://www.primacommunication.it/wp-content/uploads/2025/05/Bologna_Coppa_Italia-JTfNFI-1024x683.jpg" alt="Immagine di calcio 3" width="300" height="200">
         </div>
+        <h5>© 2025 Tutto sulla Serie A. Tutti i diritti riservati.</h5>
       </section>
     </main>
-
-
-      
-
-   
-    </main>
-
-    
   </body>
 </html>
